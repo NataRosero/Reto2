@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        td {
+            border:1px solid black;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="mensaje.js"></script>
+    <script src="funciones.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    
+    <title>Mensajes</title>
+</head>
+<body onload="messageData()">
+    <h1>Mensajes</h1>
+    <div>
+        <table id="tabla">
+
+        </table>
+    </div>
+    <h2>Agregar Mensaje</h2>
+    <div>
+        <input type="number" id="id" placeholder="Id del mensaje"> <br/><br/>
+        <textarea id="messagetext" placeholder="Escribe tu mensaje" rows="4" cols="50"> </textarea><br/><br/>
+    </div>
+
+    <button onclick="location.href='indice.html'">Home</button>
+    <button onclick="saveMessage()">Guardar</button>
+</body>
+
+</html>

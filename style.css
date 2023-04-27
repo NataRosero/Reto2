@@ -1,0 +1,42 @@
+h1{
+    color: rgba(9, 145, 166, 0.866);
+    font: size 40px; 
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    
+}
+h2{
+    color: rgba(0, 48, 55, 0.866);
+    font: size 30px; 
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    
+}
+li{
+    color: rgba(255, 255, 255, 0.866);
+}
+
+a{
+    color: rgba(0, 0, 0, 0.321);
+    font: size 18px;; 
+    font-family: Roboto, Arial Black, Helvetica, sans-serif;
+}
+
+button{
+    color: #000000;
+    background-color: #cacaca;
+    border-color: rgb(211, 211, 211);
+    font: Arial;
+    block-size: 40px;
+    inline-size: 120px;
+    font-size: larger;
+    
+}
+div{
+    align-items: center;
+}
+body{
+    align-items: center;
+}
+
+table{
+    stroke: none;
+}

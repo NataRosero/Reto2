@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        td {
+            border:1px solid black;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="clientes.js"></script>
+    <script src="funciones.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <title>Clientes</title>
+</head>
+<body onload="personData()">
+    <h1>Clientes</h1>
+    <div>
+        <table id="tabla">
+
+        </table>
+    </div>
+    <h2>Registrarse</h2>
+    <div>
+        <input type="number" id="id" placeholder="Identificación"> <br/><br/>
+        <input id="name" placeholder="Nombre"> <br/><br/>
+        <input id="email" placeholder="Email"> <br/><br/>
+        <input type="number" id="age" placeholder="edad"> <br/><br/>
+    </div>
+
+    <button onclick="location.href='indice.html'">Home</button>
+    <button onclick="savePerson()">Guardar</button>
+</body>
+
+</html>
