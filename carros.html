@@ -9,6 +9,9 @@
     <script src="carros.js"></script>
     <script src="funciones.js"></script>
     <link rel="stylesheet" href="style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     
     <title>Carros</title>
 </head>
@@ -20,11 +23,12 @@
         </table>
     </div>
     <h2>Registrar carro</h2>
-    <div>
+    <div><form id="formulario">
         <input type="number" id="id" placeholder="Id del carro"> <br/><br/>
         <input id="brand" placeholder="Marca del carro"> <br/><br/>
         <input type="number" id="model" placeholder="Modelo"> <br/><br/>
         <input type="number" id="category_id" placeholder="Categoría"> <br/><br/>
+    </form>
     </div>
 
     <button onclick="location.href='indice.html'">Home</button>

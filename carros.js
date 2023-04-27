@@ -7,7 +7,11 @@ function carData(){
             mostrarDatos(respuesta.items, 'brand', "car");
         },
         error:function(respuesta, xhr){
-            alert("Ups, hay un error")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'algo salió mal',
+              })
         }
     });
 }
@@ -25,12 +29,19 @@ function saveCar(){
         contentType:'application/json',
         data: JSON.stringify(datos),
         success: function(respuesta){
-            alert("El carro "+datos.brand+" ha sido agregado")
+            Swal.fire("El carro "+datos.brand+" ha sido agregado")
             carData();
         },
         error:function(respuesta, xhr){
-            alert("Ups, hay un error")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'algo salió mal',
+              })
         }
+        
     });
+    formulario.reset();
 }
+
 

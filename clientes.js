@@ -7,7 +7,11 @@ function personData(){
             mostrarDatos(respuesta.items, 'name', 'client');
         },
         error:function(respuesta, xhr){
-            alert("Ups, hay un error")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'algo salió mal',
+              })
         }
     });
 }
@@ -25,11 +29,15 @@ function savePerson(){
         contentType:'application/json',
         data: JSON.stringify(datos),
         success: function(respuesta){
-            alert("El cliente " +datos.name+" ha sido registrado")
+            Swal.fire("El cliente " +datos.name+" ha sido registrado")
             personData();
         },
         error:function(respuesta, xhr){
-            alert("Ups, hay un error")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'algo salió mal',
+              })
         }
     });
 }

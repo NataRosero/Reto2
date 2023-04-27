@@ -8,16 +8,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="detalle.js"></script>
     <link rel="stylesheet" href="style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <title>Detalle</title>
 </head>
 <body onload="getDetail()">
-    <h1>Carros</h1>
+    <h1>Detalle</h1>
     <div>
         <table id="tabla">
 
         </table>
     </div>
-    <div>
+    <div id="botones">
 <br>
     <button onclick="location.href='indice.html'">Home</button>
     <button onclick="actData()">Actualizar</button>

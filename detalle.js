@@ -10,7 +10,11 @@ function getDetail(){
             showDetail(respuesta.items);
         },
         error:function(respuesta, xhr){
-            alert("Ups, hay un error")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'algo salió mal',
+              })
         }
     });
 }
@@ -53,13 +57,33 @@ function deleteData(){
         contentType: 'application/json',
         data: JSON.stringify(datos),
         success: function(respuesta){
-            alert("Los datos se han eliminado");
-            location.href='indice.html'
+            Swal.fire({
+                title: '¿Estás seguro?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    'Borrado con éxito',
+                  )
+                }
+              })
+                       
+            
         },
         error:function(respuesta, xhr){
-            alert("Ups, hay un error")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'algo salió mal',
+              })
         }
+        
     });
+    
 
 }
 
@@ -80,11 +104,15 @@ function actData(){
         contentType: 'application/json',
         data: JSON.stringify(datos),
         success: function(respuesta){
-            alert("Los datos se han actualizado");
-            location.href='indice.html';
+            Swal.fire("Los datos se han actualizado");
+            
         },
         error:function(respuesta, xhr){
-            alert("Ups, hay un error")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'algo salió mal',
+              })
         }
     });
 }

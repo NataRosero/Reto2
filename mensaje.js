@@ -7,7 +7,11 @@ function messageData(){
             mostrarDatos(respuesta.items, 'messagetext', 'message');
         },
         error:function(respuesta, xhr){
-            alert("Ups, hay un error")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'algo salió mal',
+              })
         }
     });
 }
@@ -23,11 +27,15 @@ function saveMessage(){
         contentType:'application/json',
         data: JSON.stringify(datos),
         success: function(respuesta){
-            alert("El mensaje ha sido agregado")
+            Swal.fire("El mensaje ha sido agregado")
             messageData();
         },
         error:function(respuesta, xhr){
-            alert("Ups, hay un error")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'algo salió mal',
+              })
         }
     });
 }
